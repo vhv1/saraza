@@ -52,7 +52,7 @@ Volviendo al proceso de datos de la figura 1.15 escribiremos en 5000 y 5001 los 
 -E 5000 ![Enter](./img/f6-1.png) 	(Examinar memoria y escribir en ella)
  |---|---|---|---|---|---|---|---|---|
   |---|---|---|---|---|---|---|---|---|
-| 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 
+| 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 |
  |---|---|---|---|---|---|---|---|---|
  
  ![Enter](./img/f6-1.png) 
