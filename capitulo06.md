@@ -50,10 +50,11 @@ El ejemplo anterior mostró la lectura de posiciones consecutivas de memoria. Ta
 Volviendo al proceso de datos de la figura 1.15 escribiremos en 5000 y 5001 los contenidos 20 y 10 (que corresponden al dato P =1020 H, y en 5006 y 5007, los contenidos 40 y 20, correspondientes a Q = 2040 H
 
 -E 5000 ![Enter](./img/f6-1.png) 	(Examinar memoria y escribir en ella)
- |---|---|---|---|---|---|---|---|---|
-  |---|---|---|---|---|---|---|---|---|
+
+|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 |
- |---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
  
  ![Enter](./img/f6-1.png) 
 _
