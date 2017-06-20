@@ -23,12 +23,11 @@ Esto nos dice que la direccion 5000H(0101 0000 0000 0000) de memoria [^1] tiene 
 
 \- E 5000 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
 | 309D:5000 | 1F. | 06. | 50. | 8D. | 46. | B0. | A0. | 6A. |
+|---|---|---|---|---|---|---|---|---|
 | 309D:5008 | 09. | 6A. | FF. | 9A. | 66. | 0E. | DF. | 00. |
 | 309D:5010 | FD. | 11. |
-|---|---|---|---|---|---|---|---|---|
+
 
 Del mísmo modo si se vuelve a pulsar la barra se conocerá el contenido de la posición 5002H, y asi de seguido para determinar contenidos de posiciones consecutivas de memoria. Por razones de claridad, aparecen hasta 8 lecturas de posiciones por renglón, y para no llenar la pantalla con numero, solo se muestra
 
@@ -51,11 +50,9 @@ Volviendo al proceso de datos de la figura 1.15 escribiremos en 5000 y 5001 los 
 
 -E 5000 ![Enter](./img/f6-1.png) 	(Examinar memoria y escribir en ella)
 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
 | 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 |
 |---|---|---|---|---|---|---|---|---|
- 
+
  ![Enter](./img/f6-1.png) 
 _
 
@@ -65,8 +62,6 @@ Si se quiere corroborar que los valores recién escritos son los nuevos contenid
 
 -E 5000 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
 | 309D:5000 |  20. | 10. |  50. | 8D. |  46. |  BO. |  40. |  20. |
 |---|---|---|---|---|---|---|---|---|
 
@@ -78,11 +73,9 @@ De esta manera se han escrito en las posiciones 5000, 5001, 5006 y 5007 los dato
 
 -E 200 ![Enter](./img/f6-1.png)  (Examinar memoria y escribir en ella)
 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
 |309D:0200 | 25.A1 | F3.00 | AA.S0 | DD.03 | 09.06 | 56.00 | 00.50 | AB.2B |
-| 309D:0208 | 49.06 | FF.06 | 00.50 | 12.A3 | FF.10 | FA.50 | 
 |---|---|---|---|---|---|---|---|---|
+| 309D:0208 | 49.06 | FF.06 | 00.50 | 12.A3 | FF.10 | FA.50 | 
 
 ![Enter](./img/f6-1.png) 
 _
@@ -92,11 +85,11 @@ Verificando luego si la escritura anterior es correcta, resulta:
 
 -E 200 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
 | 309D:0200 | Al. | 00. |  50. | 03. | 06. | OO. | 50. | 2B. |
-|309D:0208 | 06. | 06. | 50. | A3 | 10 | 50 |
 |---|---|---|---|---|---|---|---|---|
+|309D:0208 | 06. | 06. | 50. | A3 | 10 | 50 |
+
+
 _
 
 
@@ -174,11 +167,11 @@ Si se usa el comando R a secas, se visualiza el valor de registros de la UCP sin
 
 R	![Enter](./img/f6-1.png)  (Examinar registros)									
 
+| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000|	SI=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
-| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000|	SI=0000 | DI=0000 |
-| DS=309D |ES=309D |SS=309D | CS=309D | ***IP=0200*** | NV | UP | EI | PL | NZ | NA | PE | NC |	
-| 309D:0200 |	10050 || MOV AC.[5000][^8]  ||| DS:5000=1020
+| DS=309D |ES=309D |SS=309D | CS=309D | ***IP=0200*** | NV UP | EI PL | NZ NA | PE NC |	
+| 309D:0200 |	10050 | | MOV AC.[5000][^8]  | | | DS:5000=1020 |
+
 \_ 
 
  Figura 1.18
@@ -200,12 +193,12 @@ El tercer renglón se refiere a la memoria principal. El valor 0200 (igual al de
 En la parte derecha indica que en la dirección 5000 (involucrada en la instrucción) se tiene el valor 1020 (dato antes escrito) Puesto que IP=0200, el dato 1020 y el código A10050 de la instrucción son correctos, podemos ejecutar ésta. Para ello simplemente se da el comando T, y luego el Debug visualiza la misma información que la figura 1.18, pero con los cambios habidos luego de la ejecución de la instrucción:
 
 —T ![Enter](./img/f6-1.png)  + (Ejecución de la instrucción I¹) 
+
+| AX=1020 |  BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | | |
 |---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
-| AX=1020 |  BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | 
-| DI=0000 | DS=309D | ES=309D | SS=309D | CS=309D | IP=0203 |NV | UP EI | PL  NZ | NA PO | NC |
+| DI=0000 | DS=309D | ES=309D | SS=309D | CS=309D | IP=0203 |NV UP EI | PL  NZ | NA PO NC |
 | 309D: 0203 | 03060050 |  ADD    AX, [5000]²  | DS: 5000=1020 |
-|---|---|---|---|---|---|---|---|---|
+
 \_
 
   Figura 1.19
@@ -217,12 +210,12 @@ como habíamos previsto al hablar de IP. Asimismo vemos que
 el código 03060050 de I2 es el correcto, por lo que podemos ejecutar I(2)[^10]:
 
 —T ![Enter](./img/f6-1.png)   + (Ejecución de la instrucción I2)
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
+
 | AX=2040 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+|---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D | IP=0207 |  NV UP | El  PL | NZ NA | PO NC |
 | 309D: 0207 | 2B060650 |  SUB |   AX. [5006]2 |||  DS: > 5006=2040 |
-|---|---|---|---|---|---|---|---|---|
+
 \_
 
   Figura 1.20
@@ -232,12 +225,12 @@ y el resultado (2040) escribirlo en lugar de 1020.
 También se verifica que el dato es 2040, y que 2B060650 es el código de I3, instrucción de resta que pasaremos a ejecutar:
 
 —T ![Enter](./img/f6-1.png)   + (Ejecución de la instrucción I(3))
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
+
 | AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+|---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D |  SS=309D | CS=309D | IP=020B |   NV   UP | El   PL |  ZR   NA |  PE   NC |
 | 309D:  020B |   A31050  |  MOV [15010],| AXD  |  DS:  5010=FD11 |
-|---|---|---|---|---|---|---|---|---|
+
 \_
 
    Figura 1.21
@@ -245,12 +238,12 @@ También se verifica que el dato es 2040, y que 2B060650 es el código de I3, in
 I(3) ordenaba restar a AX el contenido de 5006, que es 2040H, o sea que se ha efectuado 2040H - 2040H = = 000H, como aparece en AX.
 
 —T ![Enter](./img/f6-1.png)    + (Ejecución de la instrucción I4)
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
+
 | AX=0000 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 |
+|---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D	| IP=020E | NV UP | El PL | ZR NA | PE NC |
 | 309D:020B | BB1026 ||| MOV BX, 2610 |
-|---|---|---|---|---|---|---|---|---|
+
 \_
 
 
@@ -288,22 +281,20 @@ Con el Debug también es factible hacer que se ejecuten, una tras otra, a la vel
 Luego de haber ejecutado las instrucciones una por una, puesto que los datos e instrucciones permanecen a memoria sin cambios, y que I(1) no requiere que AX esté en cero, si se ejecutan nuevamente dichas instrucciones se obtendrán los mismos resultados. Esto es lo que haremos, pero en vez de ejecutarlas una por una, daremos la orden de ejecutar una tras otra, I(1), I(2), I(3) e I(4) Antes de dar el comando debemos hacer que I -que quedó en 020B— pase a tener el valor 0200 H, para apuntar a la dirección donde comienza I(1), para lo cual debemos ordenar R IP de la forma vista. Después, como paso previo a la ejecución, para constatar que todo está en orden podemos hacer como antes:
 
 -R ![Enter](./img/f6-1.png)  (Examinar registros)
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
+
 | AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+|---|---|---|---|---|---|---|---|---|
 | DS=309D |	ES=309D | SS=309D | CS=309D | IP=0200 |	NV	UP | El	PL | NZ NA | PO NC |
 |309D: 0200	 | AI0050 |||	MOV AX,[5000j |||	DS:> 5000=I020 |
-|---|---|---|---|---|---|---|---|---|
 
 El comando para ejecutar las instrucciones que van de la dirección 200 a la 20F [^11] es
 
 -G =0200 020E ![Enter](./img/f6-1.png) 
-|---|---|---|---|---|---|---|---|---|
-|---|---|---|---|---|---|---|---|---|
+
 | AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 |
+|---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D | IP=020E | NV	UP | El	PL | ZR NA | PE NC |
 |309D:020B | BB1026 ||| MOV BX.2610 |
-|---|---|---|---|---|---|---|---|---|
 
 
 Puede verificarse que se ha obtenido el mismo resultado que en la figura 1.22, correspondiente al mismo proceso realizado instrucción por instrucción con intervención del operador.
