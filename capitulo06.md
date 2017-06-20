@@ -143,10 +143,13 @@ Las instrucciones de salto, son pues las que permiten cambiar automáticamente e
 
 Conforme a lo anticipado mas arriba, mediante el Debug cargaremos en el IP la dirección de la primera instrucción a ejecutar, que como hemos establecido es 0200H. Para realizar esto, una vez que mediante el Debug hemos escrito los datos y las instrucciones, le damos la orden:
 
-> -R IP ![Enter](./img/f6-1.png)   (comando al debug para examinar el valor del Registro IP y cambiarlo si se desea)
->  IP 0100  (el Debug informa que actualmente el IP contine 0100)
-> ": 0200 ![Enter](./img/f6-1.png)  (al lado de los dos puntos se deja el Debug escribimos 0200, nuevo valor que debe tener IP)
-\_										
+-R IP ![Enter](./img/f6-1.png)      (comando al debug para examinar el valor del Registro IP y cambiarlo si se desea)
+
+IP 0100                             (el Debug informa que actualmente el IP contine 0100)
+
+: 0200 ![Enter](./img/f6-1.png)    (al lado de los dos puntos se deja el Debug escribimos 0200, nuevo valor que debe tener IP)
+
+_										
  
  Figura 1.17
 
