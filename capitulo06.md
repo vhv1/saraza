@@ -164,7 +164,7 @@ Hemos usado el comando R IP - para conocer el valor de un registro particular[^7
 Si se usa el comando R a secas, se visualiza el valor de registros de la UCP sin poder modificarlos:
 
 
-R	![Enter](./img/f6-1.png)  (Examinar registros)									
+R ![Enter](./img/f6-1.png)  (Examinar registros)									
 
 | AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000|	SI=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
@@ -212,7 +212,7 @@ el código 03060050 de I2 es el correcto, por lo que podemos ejecutar I(2)[^10]:
 
 | AX=2040 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
-| DS=309D | ES=309D | SS=309D | CS=309D | IP=0207 |  NV UP | El  PL | NZ NA | PO NC |
+| DS=309D | ES=309D | SS=309D | CS=309D | IP=0207 |  NV UP | El  PL NZ | NA PO | NC |
 | 309D: 0207 | 2B060650 |  SUB |   AX. [5006]2 |||  DS: > 5006=2040 |
 
 \_
