@@ -51,10 +51,9 @@ Volviendo al proceso de datos de la figura 1.15 escribiremos en 5000 y 5001 los 
 
 -E 5000 ![Enter](./img/f6-1.png) 	(Examinar memoria y escribir en ella)
 
-| 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 |
+| 309D:5000	|	1F.20	|	06.10	|	50.	|	8D.	|	46.	|	B0.	|	A0.40	|	6A.20 ![Enter](./img/f6-1.png)|
 |---|---|---|---|---|---|---|---|---|
 
- ![Enter](./img/f6-1.png) 
 _
 
    Figura 1.16[^3]
@@ -63,10 +62,9 @@ Si se quiere corroborar que los valores recién escritos son los nuevos contenid
 
 -E 5000 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
-| 309D:5000 |  20. | 10. |  50. | 8D. |  46. |  BO. |  40. |  20. |
+| 309D:5000 |  20. | 10. |  50. | 8D. |  46. |  BO. |  40. |  20. ![Enter](./img/f6-1.png)|
 |---|---|---|---|---|---|---|---|---|
 
-  ![Enter](./img/f6-1.png) 
 _
 
 De esta manera se han escrito en las posiciones 5000, 5001, 5006 y 5007 los datos que en la figura 1.15 aparecen escritos en la "escalera" (que representa las posiciones de memoria). En las posiciones 5010 y 5011 deberá ir el resultado de la operación a realizar, en reemplazo de los contenidos que existan (en este caso FD y 11, como surge de la primer lectura realizada), por lo que no interesa estos valores (FD y 11)
@@ -76,9 +74,8 @@ De esta manera se han escrito en las posiciones 5000, 5001, 5006 y 5007 los dato
 
 |309D:0200 | 25.A1 | F3.00 | AA.S0 | DD.03 | 09.06 | 56.00 | 00.50 | AB.2B |
 |---|---|---|---|---|---|---|---|---|
-| 309D:0208 | 49.06 | FF.06 | 00.50 | 12.A3 | FF.10 | FA.50 | 
+| 309D:0208 | 49.06 | FF.06 | 00.50 | 12.A3 | FF.10 | FA.50 ![Enter](./img/f6-1.png)| 
 
-![Enter](./img/f6-1.png) 
 _
 
 
@@ -88,11 +85,9 @@ Verificando luego si la escritura anterior es correcta, resulta:
 
 | 309D:0200 | Al. | 00. |  50. | 03. | 06. | OO. | 50. | 2B. |
 |---|---|---|---|---|---|---|---|---|
-|309D:0208 | 06. | 06. | 50. | A3 | 10 | 50 |
-
+|309D:0208 | 06. | 06. | 50. | A3 | 10 | 50 ![Enter](./img/f6-1.png)|
 
 _
-
 
 De esta forma hemos realizado la escritura en memoria de las instrucciones.
 Suponiendo que se quiera salir del Debug, se debe tipear Q (Quit) para volver al DOS:
