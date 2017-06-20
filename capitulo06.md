@@ -23,6 +23,7 @@ Esto nos dice que la direccion 5000H(0101 0000 0000 0000) de memoria [^1] tiene 
 
 \- E 5000 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
+|---|---|---|---|---|---|---|---|---|
 | 309D:5000 | 1F. | 06. | 50. | 8D. | 46. | B0. | A0. | 6A. |
 | 309D:5008 | 09. | 6A. | FF. | 9A. | 66. | 0E. | DF. | 00. |
 | 309D:5010 | FD. | 11. | 
