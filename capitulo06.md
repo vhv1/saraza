@@ -211,7 +211,7 @@ el código 03060050 de I2 es el correcto, por lo que podemos ejecutar I(2)[^10]:
 
 —T ![Enter](./img/f6-1.png)   + (Ejecución de la instrucción I2)
 
-| AX=2040 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+| AX=2040 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D | IP=0207 |  NV UP | El  PL | NZ NA | PO NC |
 | 309D: 0207 | 2B060650 |  SUB |   AX. [5006]2 |||  DS: > 5006=2040 |
@@ -226,7 +226,7 @@ También se verifica que el dato es 2040, y que 2B060650 es el código de I3, in
 
 —T ![Enter](./img/f6-1.png)   + (Ejecución de la instrucción I(3))
 
-| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D |  SS=309D | CS=309D | IP=020B |   NV   UP | El   PL |  ZR   NA |  PE   NC |
 | 309D:  020B |   A31050  |  MOV [15010],| AXD  |  DS:  5010=FD11 |
@@ -239,7 +239,7 @@ I(3) ordenaba restar a AX el contenido de 5006, que es 2040H, o sea que se ha ef
 
 —T ![Enter](./img/f6-1.png)    + (Ejecución de la instrucción I4)
 
-| AX=0000 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 |
+| AX=0000 | BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D	| IP=020E | NV UP | El PL | ZR NA | PE NC |
 | 309D:020B | BB1026 ||| MOV BX, 2610 |
@@ -282,7 +282,7 @@ Luego de haber ejecutado las instrucciones una por una, puesto que los datos e i
 
 -R ![Enter](./img/f6-1.png)  (Examinar registros)
 
-| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 |
+| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | S1=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
 | DS=309D |	ES=309D | SS=309D | CS=309D | IP=0200 |	NV	UP | El	PL | NZ NA | PO NC |
 |309D: 0200	 | AI0050 |||	MOV AX,[5000j |||	DS:> 5000=I020 |
@@ -291,7 +291,7 @@ El comando para ejecutar las instrucciones que van de la dirección 200 a la 20F
 
 -G =0200 020E ![Enter](./img/f6-1.png) 
 
-| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 |
+| AX=0000 |	BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000 | |
 |---|---|---|---|---|---|---|---|---|
 | DS=309D | ES=309D | SS=309D | CS=309D | IP=020E | NV	UP | El	PL | ZR NA | PE NC |
 |309D:020B | BB1026 ||| MOV BX.2610 |
