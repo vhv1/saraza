@@ -264,7 +264,8 @@ Si queremos verificar que en las direcciones 5010 y 5011 se escribió el
 resultado que está en AX. Hacemos:
 
 > -E5010 ![Enter](./img/f6-1.png)  (Examinar memoria)
-> 309D- > 5010  00.	00. ![Enter](./img/f6-1.png) 
+
+> 309D- > 5010  00.  -/ 	00. ![Enter](./img/f6-1.png) 
 
 con lo cual constatamos que efectivamente se cumplió lo que ordena I(4)
 
