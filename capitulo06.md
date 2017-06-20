@@ -193,10 +193,10 @@ En la parte derecha indica que en la dirección 5000 (involucrada en la instrucc
 
 —T ![Enter](./img/f6-1.png)  + (Ejecución de la instrucción I¹) 
 
-| AX=1020 |  BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000  | |
-|---|---|---|---|---|---|---|---|---|
-| DS=309D | ES=309D | SS=309D | CS=309D | IP=0203 |NV UP EI | PL  NZ | NA PO NC | |
-| 309D: 0203 | 03060050 |  ADD    AX, [5000]²  | DS: 5000=1020 |
+| AX=1020 |  BX=0000 | CX=0000 | DX=0000 | SP=FFEE | BP=0000 | SI=0000 | DI=0000  |
+|---|---|---|---|---|---|---|---|
+| DS=309D | ES=309D | SS=309D | CS=309D | IP=0203 |NV UP EI | PL  NZ | NA PO NC |
+| 309D: 0203 | 03060050 | | ADD AX, [5000]² | | | DS: 5000=1020 |
 
 \_
 
