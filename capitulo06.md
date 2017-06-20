@@ -23,10 +23,11 @@ Esto nos dice que la direccion 5000H(0101 0000 0000 0000) de memoria [^1] tiene 
 
 \- E 5000 ![Enter](./img/f6-1.png)  (Examinar memoria)
 
-| 309D:5000 | 1F. | 06. | 50. | 8D. | 46. | B0. | A0. | 6A. |
-|---|---|---|---|---|---|---|---|---|
-| 309D:5008 | 09. | 6A. | FF. | 9A. | 66. | 0E. | DF. | 00. |
-| 309D:5010 | FD. | 11. |
+| 309D:5000 | 1F. | 06. | 50. | 8D. | 46. | B0. | A0. | 6A. | |
+|---|---|---|---|---|---|---|---|---|---|
+| 309D:5008 | 09. | 6A. | FF. | 9A. | 66. | 0E. | DF. | 00. | |
+| 309D:5010 | FD. | 11. | | | | | |
+| - | | 5000 | 5001... | | | | |5006 | 5007 |
 
 
 Del mísmo modo si se vuelve a pulsar la barra se conocerá el contenido de la posición 5002H, y asi de seguido para determinar contenidos de posiciones consecutivas de memoria. Por razones de claridad, aparecen hasta 8 lecturas de posiciones por renglón, y para no llenar la pantalla con numero, solo se muestra
